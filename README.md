@@ -26,7 +26,7 @@ The environment is considered solved, when the **average (over 100 episodes) of 
 
 #### Download the Unity Environment
 
-- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip) (I used this one and already included it into the repo)
+- Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Linux.zip)  (**Note**: You can replace ``Tennis_Linux.zip`` at the end of the URL with ``Tennis_Linux_NoVis.zip`` to get the non-visual environment. I already included both in the repo.)
 - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis.app.zip)
 - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86.zip)
 - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P3/Tennis/Tennis_Windows_x86_64.zip)
