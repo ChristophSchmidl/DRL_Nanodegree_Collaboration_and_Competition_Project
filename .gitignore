@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Unignore UnityEnvironment files
+!/src/Tennis_Linux/Tennis_Data/*/*/*
+!/src/Tennis_Linux_NoVis/Tennis_Data/*/*/*
