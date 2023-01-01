@@ -18,19 +18,21 @@ def print_env_info(env):
     brain_name = env.brain_names[0]
     brain = env.brains[brain_name]
 
-    print(f"brain_name: {brain_name}")
-    print(f"brain: {brain}")
+    print(f"Bbrain_name: {brain_name}")
+    print(f"Brain: {brain}")
 
     # reset the environment
     unity_env = env.reset(train_mode=True)[brain_name]
 
     action_size = brain.vector_action_space_size
-    state = unity_env.vector_observations[0]
-    state_size = len(state)
+    state = unity_env.vector_observations
+    state_size = state.shape
+    num_agents = len(unity_env.agents)
 
-    print(f"action_size: {action_size}")
-    print(f"state_size: {state_size}")
-    print(f"First observation/state: {state}")
+    print(f"Action_size: {action_size} of type {type(action_size)}")
+    print(f"State_size: {state_size} with type {type(state_size)}")
+    print(f"First observation/state: {state} with shape {state.shape}")
+    print(f"Number of agents: {num_agents}")
 
 def get_env(visual_mode=False):
     if visual_mode:

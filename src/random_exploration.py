@@ -26,7 +26,7 @@ def random_exploration(env):
         while True:
             print(f"State: {states}")
             actions = np.random.randn(num_agents, action_size) # select an action (for each agent)
-            print(f"Original actions: {actions}")
+            print(f"Original actions: {actions} of shape {actions.shape}")
             actions = np.clip(actions, -1, 1)                  # all actions between -1 and 1
             print(f"Clipped actions: {actions}")
             unity_env = env.step(actions)[brain_name]           # send all actions to tne environment
