@@ -30,14 +30,14 @@ def parse_bool(s: str) -> bool:
 
 def parse_arguments():
     parser = argparse.ArgumentParser(
-        description='ActorCritic methods - Continuous Control Project'
+        description='ActorCritic methods - Collaboration and Competition Project'
     )
 
     # the hyphen makes the argument optional
     parser.add_argument('-gpu', type=str, default='0', help='GPU: 0 or 1. Default is 0.')
-    parser.add_argument('-episodes', type=int, default=5000, help='Number of games/episodes to play. Default is 1000.')
+    parser.add_argument('-episodes', type=int, default=5000, help='Number of games/episodes to play. Default is 5000.')
     parser.add_argument('-alpha', type=float, default=0.0001, help='Learning rate alpha for the actor network. Default is 0.0001.')
-    parser.add_argument('-beta', type=float, default=0.001, help='Learning rate beta for the critic network. Default is 0.0001.')
+    parser.add_argument('-beta', type=float, default=0.001, help='Learning rate beta for the critic network. Default is 0.001.')
     parser.add_argument('-gamma', type=float, default=0.99, help='Discount factor for update equation. Default is 0.99.')
     parser.add_argument('-tau', type=float, default=0.001, help='Update network parameters. Default is 0.001.')
     parser.add_argument('-algo', type=str, default='DDPGAgent',

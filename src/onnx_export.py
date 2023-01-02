@@ -32,13 +32,13 @@ def convert_onnx(model, name, input_size, n_actions=None):
 
 
 if __name__ == '__main__':
-    input_size = 33
-    n_actions = 4
+    input_size = 24
+    n_actions = 2
 
     alpha = 0.0001
-    beta = 0.0001
-    fc1_dims=128 
-    fc2_dims=128
+    beta = 0.001
+    fc1_dims=400 
+    fc2_dims=300
     input_dims = input_size
 
     actor_model = ActorNetwork(alpha, input_dims, fc1_dims, fc2_dims,
