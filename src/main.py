@@ -99,6 +99,7 @@ if __name__ == '__main__':
     best_score = -np.inf
     n_steps = 0
     episode_rewards, steps_array = [], []
+    train_mode = True # True = fast, False = slow
 
     # Neat trick without using if/else/switch: get me the correct agent/algorithm
     conrete_agent = getattr(Agents, args.algo)
@@ -152,7 +153,7 @@ if __name__ == '__main__':
     solution_txt =""
 
     for i in range(args.episodes):
-        unity_env = env.reset(train_mode=True)[brain_name]
+        unity_env = env.reset(train_mode=train_mode)[brain_name]
         dones = False
         scores = np.zeros(num_agents)
         obs = unity_env.vector_observations
